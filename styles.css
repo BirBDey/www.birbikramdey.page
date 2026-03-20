@@ -1,4 +1,4 @@
-﻿@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap");
 
 :root {
   --bg: #07131b;
@@ -340,6 +340,7 @@ select {
 
 .hero-copy,
 .panel,
+.cta-band,
 .doc-card,
 .note-card,
 .pub-card,
@@ -654,23 +655,32 @@ select {
 
 .cta-band {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: var(--space-5);
   flex-wrap: wrap;
   background: linear-gradient(135deg, rgba(61, 189, 180, 0.12), rgba(255, 143, 69, 0.06)), var(--surface);
 }
 
+.cta-band > :first-child {
+  flex: 1 1 28rem;
+  min-width: 0;
+}
+
+.cta-band .button-row {
+  margin-top: 0;
+}
+
 .cta-band h2 {
   margin: 0;
   font-size: clamp(1.55rem, 3vw, 2.4rem);
-  line-height: 1.02;
+  line-height: 1.1;
   letter-spacing: -0.05em;
 }
 
 .cta-band p {
   max-width: 42rem;
-  margin: 0.4rem 0 0;
+  margin: 0.55rem 0 0;
   color: var(--text-soft);
 }
 
@@ -892,3 +902,6 @@ select {
     transform: none;
   }
 }
+
+
+
